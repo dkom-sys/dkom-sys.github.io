@@ -1,155 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dunia Komputer Enterprise</title>
-  <meta
-    name="description"
-    content="Official website of Dunia Komputer Enterprise. Our website is coming soon."
-  />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dunia Komputer Enterprise</title>
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #f8fafc;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
+<style>
 
-    .card {
-      width: 100%;
-      max-width: 760px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 20px;
-      padding: 40px 32px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,system-ui,Arial,sans-serif;
+}
 
-    .badge {
-      display: inline-block;
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.12);
-      margin-bottom: 20px;
-    }
+body{
 
-    h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 12px;
-      line-height: 1.1;
-    }
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:30px;
 
-    h2 {
-      font-size: 1.2rem;
-      color: #cbd5e1;
-      margin-bottom: 24px;
-      font-weight: 500;
-    }
+/* liquid gradient background */
+background: radial-gradient(circle at 20% 20%, #1e3a8a, transparent 40%),
+            radial-gradient(circle at 80% 30%, #0ea5e9, transparent 40%),
+            radial-gradient(circle at 30% 80%, #9333ea, transparent 40%),
+            linear-gradient(135deg,#020617,#0f172a);
+color:white;
+}
 
-    p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: #e2e8f0;
-      margin-bottom: 18px;
-    }
+/* floating glow blobs */
 
-    .section-title {
-      margin-top: 28px;
-      margin-bottom: 12px;
-      font-size: 1.05rem;
-      font-weight: bold;
-      color: #ffffff;
-    }
+body::before,
+body::after{
+content:"";
+position:fixed;
+width:400px;
+height:400px;
+filter:blur(120px);
+opacity:.6;
+z-index:-1;
+}
 
-    .contact-list {
-      list-style: none;
-      margin-top: 8px;
-    }
+body::before{
+background:#38bdf8;
+top:-100px;
+left:-100px;
+}
 
-    .contact-list li {
-      margin-bottom: 10px;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #f1f5f9;
-    }
+body::after{
+background:#a855f7;
+bottom:-120px;
+right:-120px;
+}
 
-    a {
-      color: #93c5fd;
-      text-decoration: none;
-    }
+/* glass card */
 
-    a:hover {
-      text-decoration: underline;
-    }
+.card{
 
-    .footer {
-      margin-top: 30px;
-      font-size: 0.95rem;
-      color: #cbd5e1;
-    }
+max-width:720px;
+width:100%;
 
-    @media (max-width: 640px) {
-      .card {
-        padding: 28px 22px;
-      }
+padding:45px 40px;
 
-      p,
-      .contact-list li {
-        font-size: 0.96rem;
-      }
-    }
-  </style>
+border-radius:22px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px) saturate(180%);
+-webkit-backdrop-filter:blur(20px) saturate(180%);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.4),
+inset 0 0 0 1px rgba(255,255,255,.05);
+
+}
+
+/* top label */
+
+.badge{
+
+display:inline-block;
+
+padding:6px 14px;
+
+font-size:.75rem;
+
+letter-spacing:.12em;
+
+text-transform:uppercase;
+
+border-radius:999px;
+
+background:rgba(255,255,255,.12);
+
+margin-bottom:20px;
+
+color:#e2e8f0;
+
+}
+
+/* headings */
+
+h1{
+
+font-size:2.5rem;
+margin-bottom:10px;
+
+}
+
+h2{
+
+font-weight:400;
+color:#cbd5f5;
+margin-bottom:25px;
+
+}
+
+p{
+
+line-height:1.7;
+margin-bottom:16px;
+color:#e2e8f0;
+
+}
+
+/* contact */
+
+.section{
+
+margin-top:28px;
+
+}
+
+.section strong{
+
+display:block;
+margin-bottom:10px;
+
+}
+
+.contact{
+
+line-height:1.7;
+}
+
+a{
+
+color:#7dd3fc;
+text-decoration:none;
+
+}
+
+a:hover{
+
+text-decoration:underline;
+
+}
+
+/* footer */
+
+.footer{
+
+margin-top:28px;
+opacity:.8;
+
+}
+
+@media(max-width:640px){
+
+.card{
+padding:30px 25px;
+}
+
+h1{
+font-size:2rem;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <main class="card">
-    <div class="badge">Official Website Coming Soon</div>
 
-    <h1>Dunia Komputer Enterprise</h1>
-    <h2>We’re building something better.</h2>
+<div class="card">
 
-    <p>Thank you for visiting Dunia Komputer Enterprise.</p>
+<div class="badge">Website Coming Soon</div>
 
-    <p>
-      Our website is currently under development and will be launched soon.
-      We are preparing a platform that will provide more information about our
-      company, services, and business solutions.
-    </p>
+<h1>Dunia Komputer Enterprise</h1>
 
-    <div class="section-title">Email Us</div>
-    <ul class="contact-list">
-      <li>
-        HQ:
-        <a href="mailto:duniakomputerdke@gmail.com">duniakomputerdke@gmail.com</a>
-      </li>
-    </ul>
+<h2>Official Website Launching Soon</h2>
 
-    <div class="section-title">Phone or WhatsApp Us</div>
-    <ul class="contact-list">
-      <li>Hidayat: <a href="tel:0103354040">0103354040</a></li>
-      <li>Hady: <a href="tel:0182000597">0182000597</a></li>
-      <li>Ragu: <a href="tel:0162534404">0162534404</a></li>
-    </ul>
+<p>
+Thank you for visiting Dunia Komputer Enterprise.
+</p>
 
-    <p class="footer">
-      We appreciate your patience and look forward to welcoming you back soon.
-      <br /><br />
-      — <strong>Dunia Komputer Enterprise</strong>
-    </p>
-  </main>
+<p>
+Our website is currently under development and will be launched soon.
+We are preparing a platform that will provide more information about our
+company, services, and business solutions.
+</p>
+
+<div class="section">
+
+<strong>Email Us</strong>
+
+<div class="contact">
+HQ: <a href="mailto:duniakomputerdke@gmail.com">duniakomputerdke@gmail.com</a>
+</div>
+
+</div>
+
+<div class="section">
+
+<strong>Phone / WhatsApp</strong>
+
+<div class="contact">
+Hidayat — <a href="https://wa.me/60103354040">0103354040</a><br>
+Hady — <a href="https://wa.me/60182000597">0182000597</a><br>
+Ragu — <a href="https://wa.me/60162534404">0162534404</a>
+</div>
+
+</div>
+
+<div class="footer">
+
+We appreciate your patience and look forward to welcoming you back soon.
+
+<br><br>
+
+— <strong>Dunia Komputer Enterprise</strong>
+
+</div>
+
+</div>
+
 </body>
 </html>
