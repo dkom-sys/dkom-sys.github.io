@@ -22,36 +22,41 @@ align-items:center;
 justify-content:center;
 padding:30px;
 
-/* liquid gradient background */
-background: radial-gradient(circle at 20% 20%, #1e3a8a, transparent 40%),
-            radial-gradient(circle at 80% 30%, #0ea5e9, transparent 40%),
-            radial-gradient(circle at 30% 80%, #9333ea, transparent 40%),
-            linear-gradient(135deg,#020617,#0f172a);
+/* darker premium background */
+
+background:
+radial-gradient(circle at 20% 20%, #0f172a, transparent 40%),
+radial-gradient(circle at 80% 30%, #1e293b, transparent 40%),
+radial-gradient(circle at 30% 80%, #020617, transparent 40%),
+linear-gradient(135deg,#000000,#020617,#020617);
+
 color:white;
 }
 
-/* floating glow blobs */
+/* glow blobs */
 
 body::before,
 body::after{
+
 content:"";
 position:fixed;
-width:400px;
-height:400px;
-filter:blur(120px);
-opacity:.6;
+width:450px;
+height:450px;
+filter:blur(140px);
+opacity:.45;
 z-index:-1;
+
 }
 
 body::before{
-background:#38bdf8;
-top:-100px;
-left:-100px;
+background:#2563eb;
+top:-150px;
+left:-120px;
 }
 
 body::after{
-background:#a855f7;
-bottom:-120px;
+background:#7c3aed;
+bottom:-160px;
 right:-120px;
 }
 
@@ -66,114 +71,113 @@ padding:45px 40px;
 
 border-radius:22px;
 
-background:rgba(255,255,255,.08);
+background:rgba(255,255,255,.06);
 
-backdrop-filter:blur(20px) saturate(180%);
--webkit-backdrop-filter:blur(20px) saturate(180%);
+backdrop-filter:blur(24px) saturate(160%);
+-webkit-backdrop-filter:blur(24px) saturate(160%);
 
-border:1px solid rgba(255,255,255,.15);
+border:1px solid rgba(255,255,255,.12);
 
 box-shadow:
-0 20px 40px rgba(0,0,0,.4),
-inset 0 0 0 1px rgba(255,255,255,.05);
+0 20px 50px rgba(0,0,0,.6),
+inset 0 0 0 1px rgba(255,255,255,.04);
 
 }
 
-/* top label */
+/* badge */
 
 .badge{
 
 display:inline-block;
-
 padding:6px 14px;
-
 font-size:.75rem;
-
 letter-spacing:.12em;
-
 text-transform:uppercase;
-
 border-radius:999px;
 
-background:rgba(255,255,255,.12);
+background:rgba(255,255,255,.08);
 
 margin-bottom:20px;
 
-color:#e2e8f0;
-
 }
 
-/* headings */
+/* text */
 
 h1{
-
 font-size:2.5rem;
 margin-bottom:10px;
-
 }
 
 h2{
-
 font-weight:400;
 color:#cbd5f5;
 margin-bottom:25px;
-
 }
 
 p{
-
 line-height:1.7;
 margin-bottom:16px;
 color:#e2e8f0;
+}
+
+/* buttons */
+
+.buttons{
+
+margin-top:30px;
+display:flex;
+flex-direction:column;
+gap:14px;
 
 }
 
-/* contact */
-
-.section{
-
-margin-top:28px;
-
-}
-
-.section strong{
+.btn{
 
 display:block;
-margin-bottom:10px;
 
-}
+padding:14px 18px;
 
-.contact{
+border-radius:12px;
 
-line-height:1.7;
-}
-
-a{
-
-color:#7dd3fc;
 text-decoration:none;
 
+color:white;
+
+font-weight:500;
+
+text-align:center;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(10px);
+
+transition:all .25s ease;
+
 }
 
-a:hover{
+.btn:hover{
 
-text-decoration:underline;
+background:rgba(255,255,255,.16);
+
+transform:translateY(-2px);
+
+box-shadow:0 6px 20px rgba(0,0,0,.5);
 
 }
 
 /* footer */
 
 .footer{
-
-margin-top:28px;
-opacity:.8;
-
+margin-top:30px;
+opacity:.75;
 }
 
 @media(max-width:640px){
 
 .card{
-padding:30px 25px;
+padding:30px 24px;
 }
 
 h1{
@@ -205,25 +209,23 @@ We are preparing a platform that will provide more information about our
 company, services, and business solutions.
 </p>
 
-<div class="section">
+<div class="buttons">
 
-<strong>Email Us</strong>
+<a class="btn" href="mailto:duniakomputerdke@gmail.com">
+Email HQ
+</a>
 
-<div class="contact">
-HQ: <a href="mailto:duniakomputerdke@gmail.com">duniakomputerdke@gmail.com</a>
-</div>
+<a class="btn" href="https://wa.me/60103354040">
+WhatsApp Hidayat
+</a>
 
-</div>
+<a class="btn" href="https://wa.me/60182000597">
+WhatsApp Hady
+</a>
 
-<div class="section">
-
-<strong>Phone / WhatsApp</strong>
-
-<div class="contact">
-Hidayat — <a href="https://wa.me/60103354040">0103354040</a><br>
-Hady — <a href="https://wa.me/60182000597">0182000597</a><br>
-Ragu — <a href="https://wa.me/60162534404">0162534404</a>
-</div>
+<a class="btn" href="https://wa.me/60162534404">
+WhatsApp Ragu
+</a>
 
 </div>
 
